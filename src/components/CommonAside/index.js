@@ -9,7 +9,8 @@ import {
     CalendarOutlined
 } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import './index.css';
 const { Header, Content, Sider } = Layout;
 function getItem(label, key, icon, children) {
     return {
@@ -34,30 +35,30 @@ const items = [
 const MenuList = [
     {
         key: 'OverView',
-        icon: <MailOutlined />,
-        label: '概览',
-      },
-      {
+        // icon: <MailOutlined />,
+        label: '本品概览',
+    },
+    {
         key: 'Contrast',
-        icon: <CalendarOutlined />,
+        // icon: <CalendarOutlined />,
         label: '竞品对比',
-      },
-     
+    }
+
 ]
 
 
 
 
 const CommonAside = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    // const [collapsed, setCollapsed] = useState(false);
     const navigate = useNavigate();
-    const selectMenu = (e) =>{
+    const selectMenu = (e) => {
         console.log(e)
         navigate(e.key)
     }
 
     return (
-        <Sider className='siderBox' style={{ backgroundColor: 'rgb(255,221,0)' }} collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+        <Sider className='siderBox'>
             <Menu style={{ backgroundColor: 'rgb(255,221,0)' }} defaultSelectedKeys={['1']} mode="inline" items={MenuList} onClick={selectMenu} />
         </Sider>
     )

@@ -12,7 +12,7 @@ const routes =[
         children:[
             { //重定向
             path: '/',
-            element: <Navigate to="home" replace />
+            element: <Navigate to="overview" replace />
             },
             {
                 path: 'home',

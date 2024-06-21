@@ -1,0 +1,31 @@
+/* HorizontalScroller.css */
+.horizontal-scroller-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* 或者你需要的固定宽度 */
+  }
+  
+  .horizontal-scroller-wrapper {
+    /* display: flex; */
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }

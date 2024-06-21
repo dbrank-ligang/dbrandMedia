@@ -19,15 +19,18 @@ const Main = () => {
             }}
         >
             <CommonHeader />
-            <Layout>
-                <CommonAside />
-                {/* <Sider className='siderBox' style={{backgroundColor: 'rgb(255,221,0)'}} collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-                    <div className="demo-logo-vertical" />
-                    <Menu style={{backgroundColor: 'rgb(255,221,0)'}} defaultSelectedKeys={['1']} mode="inline" items={items} />
-                </Sider> */}
+            <Layout
+                style={{
+                    height: 'calc(100vh - 115px)',
+                    overflow: 'auto',
+                    border: '1px solid red'
+                }}
+            >
+                <CommonAside style={{minWidth: '146px'}} />
                 <Content
                     style={{
                         margin: '16px',
+                        overflow: 'auto'
                     }}
                 >
                     <div

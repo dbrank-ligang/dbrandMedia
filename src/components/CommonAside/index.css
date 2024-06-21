@@ -1,0 +1,8 @@
+.siderBox{
+    width: 146px !important;
+    height: 100% !important;
+    min-width: 146px !important;
+    background-color: rgb(255,221,0) !important;
+    flex: 0 !important;
+    overflow: auto !important;
+}
